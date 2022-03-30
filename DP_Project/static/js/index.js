@@ -4,7 +4,7 @@ $(document).ready(function(){
         type:"GET",
         success: function (resp){
             if(resp.result == "success"){
-                alert(resp.volume)
+                //alert(resp.volume)
             }
         }
     })
