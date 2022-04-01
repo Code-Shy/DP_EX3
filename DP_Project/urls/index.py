@@ -9,7 +9,7 @@ from DP_Project.views.register import register
 urlpatterns = [
     path('index/', index, name="index"),
     path("getinfo/", getinfo, name="getinfo"),
-    path("login/", login, name="login"),
+    path('', login, name="login"),
     path('logout/', logout, name='logout'),
     path('register/', register, name='register')
 ]
