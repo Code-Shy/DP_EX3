@@ -1,11 +1,4 @@
-from django.http import JsonResponse
-from DP_Project.models.knapsack import Knapsack
-
+from DP_Project.views.Dynamic import Dynamic
 
 def getinfo(request):
-    knapsack = Knapsack.objects.all()[0]
-    return JsonResponse({
-        'result': "success",
-        'volume': knapsack.volume,
-        'worth': knapsack.worth,
-    })
+    return Dynamic(request)
