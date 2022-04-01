@@ -8,10 +8,12 @@ from django.shortcuts import render
 def login(request):
     if request.method == "GET":
         context = {'previous_page': request.GET.get('from_page', '/index')}
+        print(context)
         return render(request, 'login.html', context)
     else:
         username = request.POST['username']
         password = request.POST['password']
+        print(username)
         try:
             user = authenticate(request, username=username, password=password)
             auth.login(request, user)
