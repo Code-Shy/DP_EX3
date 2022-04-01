@@ -117,7 +117,11 @@
 
               </div>
             </div>
-            <div class="dropdown notifications zindex-popover"><a class="nav-link dropdown-toggle pulse" href="#" role="button" data-bs-toggle="dropdown"><i class="icofont-alarm fs-5"></i><span class="pulse-ring"></span></a>
+            <div class="dropdown notifications zindex-popover">
+                <span class="pulse-ring">
+
+                </span>
+            </a>
               <div id="NotificationsDiv" class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-sm-end p-0 m-0">
                 <div class="card border-0 w380">
                   <div class="card-header border-0 p-3">
@@ -165,9 +169,13 @@
             </div>
             <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
               <div class="u-info me-2">
-                <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold">Dylan Hunter</span></p>
-                <small>Admin Profile</small></div>
-              <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static"><img class="avatar lg rounded-circle img-thumbnail" src="assets/images/profile_av.png" alt="profile"></a>
+                <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold"></span></p>
+              </div>
+              <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                  {% if request.user.is_authenticated %}
+                    <a class="" href="/logout/?from_page={{ request.get_full_path }}">{{ user }}</a>
+                  {% endif %}
+              </a>
               <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
                 <div class="card border-0 w280">
                   <div class="card-body pb-0">
