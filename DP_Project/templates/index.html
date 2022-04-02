@@ -31,10 +31,10 @@
               </a>
               <!-- Menu:Sub menu ul -->
               <ul class="sub-menu collapse show" id="dashboard-Components">
-                  <li><a class="ms-link active" href="dp.html"><span>动态规划</span></a></li>
-                  <li><a class="ms-link" href="greedy.html"><span>贪心</span></a></li>
-                  <li><a class="ms-link" href="backTrace.html"><span>回溯</span></a></li>
-                  <li><a class="ms-link" href="ga.html"><span>遗传</span></a></li>
+                  <li><a class="ms-link active" href="/dp"><span>动态规划</span></a></li>
+                  <li><a class="ms-link" href="/greedy"><span>贪心</span></a></li>
+                  <li><a class="ms-link" href="/backTrace"><span>回溯</span></a></li>
+                  <li><a class="ms-link" href="/ga"><span>遗传</span></a></li>
               </ul>
           </li>
           <li><a class="m-link" href="ui-elements/ui-alerts.html"><span>散点图绘制</span></a></li>
@@ -90,7 +90,7 @@
                     </div>
                   </div>
                   <div class="list-group m-2 ">
-                      <a href="/logout/?from_page={{ request.get_full_path }}" class="list-group-item list-group-item-action border-0 ">
+                      <a href="/logout?from_page={{ previous_page }}" class="list-group-item list-group-item-action border-0 ">
                       注销
                       </a>
                     <div>
@@ -120,9 +120,9 @@
             <div class="card light-danger-bg">
               <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
                 <h6 class="mb-0 fw-bold ">在这里添加吧</h6>
+                
 
               </div>
-
             </div>
           </div>
         </div>
@@ -133,13 +133,10 @@
 </div>
 <!-- Jquery Core Js -->
 <script src="{% static 'js/index/libscripts.bundle.js' %}"></script>
-
 <!-- Plugin Js-->
 <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/apexcharts/3.28.1/apexcharts.min.js"></script>
 <!-- Jquery Page Js -->
-
 <script src="{% static 'js/index/index.js' %}"></script>
-
 <script src="{% static 'js/index/hr.js' %}"></script>
 </body>
 
