@@ -31,10 +31,10 @@
               </a>
               <!-- Menu:Sub menu ul -->
               <ul class="sub-menu collapse show" id="dashboard-Components">
-                  <li><a class="ms-link active" href="index.html"><span>动态规划</span></a></li>
-                  <li><a class="ms-link" href="project-dashboard.html"><span>贪心</span></a></li>
-                  <li><a class="ms-link" href="project-dashboard.html"><span>回溯</span></a></li>
-                  <li><a class="ms-link" href="project-dashboard.html"><span>遗传</span></a></li>
+                  <li><a class="ms-link active" href="dp.html"><span>动态规划</span></a></li>
+                  <li><a class="ms-link" href="greedy.html"><span>贪心</span></a></li>
+                  <li><a class="ms-link" href="backTrace.html"><span>回溯</span></a></li>
+                  <li><a class="ms-link" href="ga.html"><span>遗传</span></a></li>
               </ul>
           </li>
           <li><a class="m-link" href="ui-elements/ui-alerts.html"><span>散点图绘制</span></a></li>
@@ -90,7 +90,7 @@
                     </div>
                   </div>
                   <div class="list-group m-2 ">
-                      <a href="/logout/?from_page={{ request.get_full_path }}" class="list-group-item list-group-item-action border-0 ">
+                      <a href="/login" class="list-group-item list-group-item-action border-0 ">
                       注销
                       </a>
                     <div>
@@ -116,111 +116,18 @@
     <div class="body d-flex py-3">
       <div class="container-xxl">
         <div class="row clearfix g-3">
-
-
           <div class="col-md-12">
             <div class="card light-danger-bg">
               <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
                 <h6 class="mb-0 fw-bold ">在这里添加吧</h6>
-              </div>
 
+              </div>
             </div>
           </div>
         </div>
         <!-- Row End --></div>
     </div>
     <!-- Modal Members-->
-    <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title  fw-bold" id="addUserLabel">Employee Invitation</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="inviteby_email">
-              <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email address" id="exampleInputEmail1" aria-describedby="exampleInputEmail1">
-                <button class="btn btn-dark" type="button" id="button-addon2">Sent</button>
-              </div>
-            </div>
-            <div class="members_list">
-              <h6 class="fw-bold ">Employee </h6>
-              <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
-                <li class="list-group-item py-3 text-center text-md-start">
-                  <div class="d-flex align-items-center flex-column flex-sm-column flex-md-row">
-                    <div class="no-thumbnail mb-2 mb-md-0"><img class="avatar lg rounded-circle" src="assets/images/xs/avatar2.jpg" alt=""></div>
-                    <div class="flex-fill ms-3 text-truncate">
-                      <h6 class="mb-0  fw-bold">Rachel Carr(you)</h6>
-                      <span class="text-muted">rachel.carr@gmail.com</span></div>
-                    <div class="members-action"><span class="members-role ">Admin</span>
-                      <div class="btn-group">
-                        <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="icofont-ui-settings  fs-6"></i></button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#"><i class="icofont-ui-password fs-6 me-2"></i>ResetPassword</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="icofont-chart-line fs-6 me-2"></i>ActivityReport</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item py-3 text-center text-md-start">
-                  <div class="d-flex align-items-center flex-column flex-sm-column flex-md-row">
-                    <div class="no-thumbnail mb-2 mb-md-0"><img class="avatar lg rounded-circle" src="assets/images/xs/avatar3.jpg" alt=""></div>
-                    <div class="flex-fill ms-3 text-truncate">
-                      <h6 class="mb-0  fw-bold">Lucas Baker<a href="#" class="link-secondary ms-2">(Resend invitation)</a></h6>
-                      <span class="text-muted">lucas.baker@gmail.com</span></div>
-                    <div class="members-action">
-                      <div class="btn-group">
-                        <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Members </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#"><i class="icofont-check-circled"></i><span>All operations permission</span></a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fs-6 p-2 me-1"></i><span>Only Invite & manage team</span></a></li>
-                        </ul>
-                      </div>
-                      <div class="btn-group">
-                        <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="icofont-ui-settings  fs-6"></i></button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#"><i class="icofont-delete-alt fs-6 me-2"></i>Delete Member</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item py-3 text-center text-md-start">
-                  <div class="d-flex align-items-center flex-column flex-sm-column flex-md-row">
-                    <div class="no-thumbnail mb-2 mb-md-0"><img class="avatar lg rounded-circle" src="assets/images/xs/avatar8.jpg" alt=""></div>
-                    <div class="flex-fill ms-3 text-truncate">
-                      <h6 class="mb-0  fw-bold">Una Coleman</h6>
-                      <span class="text-muted">una.coleman@gmail.com</span></div>
-                    <div class="members-action">
-                      <div class="btn-group">
-                        <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Members </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#"><i class="icofont-check-circled"></i><span>All operations permission</span></a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fs-6 p-2 me-1"></i><span>Only Invite & manage team</span></a></li>
-                        </ul>
-                      </div>
-                      <div class="btn-group">
-                        <div class="btn-group">
-                          <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="icofont-ui-settings  fs-6"></i></button>
-                          <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#"><i class="icofont-ui-password fs-6 me-2"></i>ResetPassword</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="icofont-chart-line fs-6 me-2"></i>ActivityReport</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="icofont-delete-alt fs-6 me-2"></i>Suspend member</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="icofont-not-allowed fs-6 me-2"></i>Delete Member</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <!-- Jquery Core Js -->
