@@ -9,11 +9,11 @@ def Backtrack(request):
         return render(request, "backTrace.html")
     knapsacks = Knapsack.objects.filter(number='1')
 
-    v_list = [] # 体积列表
-    w_list = [] # 价值列表
+    v_list = []  # 体积列表
+    w_list = []  # 价值列表
 
-    v_list.append(0) # 体积列表初始化
-    w_list.append(0) # 价值列表初始化
+    v_list.append(0)  # 体积列表初始化
+    w_list.append(0)  # 价值列表初始化
 
     for knapsack in knapsacks:
         v_list.append(int(knapsack.volume))
@@ -30,6 +30,6 @@ def Backtrack(request):
     maxvalue = f[V]
 
     return JsonResponse({
-        'result':'success',
-        'maxvalue':maxvalue,
+        'result': 'success',
+        'maxvalue': maxvalue,
     })
