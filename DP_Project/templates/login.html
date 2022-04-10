@@ -24,7 +24,7 @@
         <img src="{% static 'img/img-3.svg' %}" alt="">
     </div>
     <div class="login-box">
-        <form action="/login/?from_page={{ previous_page }}" method="POST">
+        <form method="POST">
             {% csrf_token %}
             <img src="{% static 'img/avatar.svg' %}" alt="" class="avatar">
             <h2>Welcome</h2>

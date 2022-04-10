@@ -1,8 +1,12 @@
 from django.http import JsonResponse
+from django.shortcuts import render
+
 from DP_Project.models.knapsack import Knapsack
 
 
 def Backtrack(request):
+    if request.method == 'GET':
+        return render(request, "backTrace.html")
     knapsacks = Knapsack.objects.filter(number='1')
 
     v_list = [] # 体积列表

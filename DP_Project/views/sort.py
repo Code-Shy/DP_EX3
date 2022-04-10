@@ -1,5 +1,6 @@
+from django.shortcuts import render
 
 
 def sort(request):
 
-    return
+    return render(request, "sort.html")
