@@ -1,15 +1,19 @@
-from django.http import JsonResponse
+from django.shortcuts import render
+
 from DP_Project.models.knapsack import Knapsack
 
 
 def Greedy(request):
+    if request.method == 'GET':
+        return render(request, "greedy.html")
+
     knapsacks = Knapsack.objects.filter(number='1')
 
-    v_list = [] # 体积列表
-    w_list = [] # 价值列表
+    v_list = []  # 体积列表
+    w_list = []  # 价值列表
 
-    v_list.append(0) # 体积列表初始化
-    w_list.append(0) # 价值列表初始化
+    v_list.append(0)  # 体积列表初始化
+    w_list.append(0)  # 价值列表初始化
 
     for knapsack in knapsacks:
         v_list.append(int(knapsack.volume))
@@ -26,6 +30,6 @@ def Greedy(request):
     maxvalue = f[V]
 
     return JsonResponse({
-        'result':'success',
-        'maxvalue':maxvalue,
+        'result': 'success',
+        'maxvalue': maxvalue,
     })

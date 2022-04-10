@@ -1,10 +1,10 @@
 from django.urls import path
 
-from DP_Project.views import scatter
+from DP_Project.views import scatter, Greedy
 from DP_Project.views.Backtrack import Backtrack
 from DP_Project.views.Dynamic import Dynamic
 from DP_Project.views.ga import ga
-from DP_Project.views.greedy import greedy
+from DP_Project.views.Greedy import Greedy
 from DP_Project.views.index import index
 from DP_Project.views.login import login
 from DP_Project.views.logout import logout
@@ -18,5 +18,5 @@ urlpatterns = [
     path('BackTrace/', Backtrack, name="BackTrace"),
     path("Dynamic/", Dynamic, name="Dynamic"),
     path("ga/", ga, name="ga"),
-    path('greedy/', greedy, name='greedy'),
+    path('Greedy/', Greedy, name='Greedy'),
 ]
